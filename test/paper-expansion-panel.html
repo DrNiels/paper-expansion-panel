@@ -6,11 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-		<script src="../../web-component-tester/browser.js"></script>
-		<script src="../../test-fixture/test-fixture-mocha.js"></script>
+		<script src="../../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>cript src="../../../wct-browser-legacy/browser.js"></script>pt>
 
-		<link rel="import" href="../paper-expansion-panel.html">
-		<link rel="import" href="../../test-fixture/test-fixture.html">
+<script src="../../../@polymer/test-fixture/test-fixture-mocha.js"></script>pt>
+		<script type="module" src="../../../@polymer/test-fixture/test-fixture.js"></script>
 	</head>
 	<body>
 
@@ -25,26 +24,30 @@
 				suite('open/close behavior', function() {
 					var element;
 
-					setup(function() {
+<script type="module">
+import '../paper-expansion-panel.js';
+import '../../../@polymer/test-fixture/test-fixture.js';
+suite('<paper-expansion-panel>', function() {
+    suite('open/close behavior', function() {
+        var element;
+
+        setup(function() {
 						element = fixture('TrivialElement');
-					});
+        });
 
-					test('defaults to closed', function() {
+        test('defaults to closed', function() {
 						expect(element.opened).to.be.eql(false);
-					});
+        });
 
-					test('shows open toggle icon when closed', function() {
+        test('shows open toggle icon when closed', function() {
 						element.opened = false;
 						expect(element._toggleIcon).to.be.eql('icons:expand-more');
-					});
+        });
 
-					test('shows open toggle icon when opened', function() {
+        test('shows open toggle icon when opened', function() {
 						element.opened = true;
 						expect(element._toggleIcon).to.be.eql('icons:expand-less');
-					});
-				});
-			});
-		</script>
-
-	</body>
-</html>
+        });
+    });
+});
+</script>

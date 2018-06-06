@@ -1,0 +1,40 @@
+{
+  "description": "A Material Design expansion panel with header and collapsible content (Polymer)",
+  "keywords": [
+    "web-components",
+    "polymer",
+    "paper",
+    "material design",
+    "expansion",
+    "panel",
+    "collapse",
+    "collapsible"
+  ],
+  "homepage": "https://github.com/collaborne/paper-expansion-panel",
+  "name": "dr-niels-paper-expansion-panel",
+  "version": "1.0.1",
+  "resolutions": {
+    "inherits": "2.0.3",
+    "samsam": "1.1.3",
+    "supports-color": "3.1.2",
+    "type-detect": "1.0.0",
+    "@webcomponents/webcomponentsjs": "2.0.0-beta.2"
+  },
+  "main": "paper-expansion-panel.js",
+  "author": "collaborne",
+  "license": "Apache 2",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "@polymer/iron-icons": "^3.0.0-pre.18",
+    "@polymer/iron-collapse": "^3.0.0-pre.18",
+    "@polymer/paper-icon-button": "^3.0.0-pre.18",
+    "@polymer/paper-item": "^3.0.0-pre.18",
+    "@polymer/paper-styles": "^3.0.0-pre.18",
+    "@polymer/iron-flex-layout": "^3.0.0-pre.18"
+  },
+  "devDependencies": {
+    "@polymer/iron-component-page": "^3.0.0-pre.18",
+    "wct-browser-legacy": "^0.0.1-pre.11",
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.18"
+  }
+}

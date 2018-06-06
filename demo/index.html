@@ -1,13 +1,13 @@
 <html>
 	<head>
-		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-		<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-		<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-		<link rel="import" href="../../iron-icons/iron-icons.html">
-		<link rel="import" href="../../paper-item/paper-item.html">
-		<link rel="import" href="../paper-expansion-panel.html">
-		<link rel="import" href="../../iron-flex-layout/iron-flex-layout.html">
-		<link rel="import" href="../../iron-flex-layout/iron-flex-layout-classes.html">
+		<script src="../../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+		<script type="module" src="../../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js"></script>
+		<script type="module" src="../../../@polymer/iron-demo-helpers/demo-snippet.js"></script>
+		<script type="module" src="../../../@polymer/iron-icons/iron-icons.js"></script>
+		<script type="module" src="../../../@polymer/paper-item/paper-item.js"></script>
+		<script type="module" src="../paper-expansion-panel.js"></script>
+		<script type="module" src="../../../@polymer/iron-flex-layout/iron-flex-layout.js"></script>
+		<script type="module" src="../../../@polymer/iron-flex-layout/iron-flex-layout-classes.js"></script>
 
 	</head>
 
@@ -66,12 +66,19 @@
 					var scope = document.querySelector('dom-bind');
 					scope.onToggle = function() {
 						alert('Toggled');
-					};
-				</script>
-			</dom-bind>
-		</demo-snippet>
-
-		<h4>Styling</h4>
+				<script type="module">
+import '../../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
+import '../../../@polymer/iron-demo-helpers/demo-snippet.js';
+import '../../../@polymer/iron-icons/iron-icons.js';
+import '../../../@polymer/paper-item/paper-item.js';
+import '../paper-expansion-panel.js';
+import '../../../@polymer/iron-flex-layout/iron-flex-layout.js';
+import '../../../@polymer/iron-flex-layout/iron-flex-layout-classes.js';
+var scope = document.querySelector('dom-bind');
+scope.onToggle = function() {
+    alert('Toggled');
+};
+</script></h4>
 		<demo-snippet>
 			<template>
 				<custom-style>

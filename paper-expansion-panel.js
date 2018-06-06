@@ -1,12 +1,4 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-icons/iron-icons.html">
-<link rel="import" href="../iron-collapse/iron-collapse.html">
-<link rel="import" href="../paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../paper-item/paper-item.html">
-<link rel="import" href="../paper-styles/paper-styles.html">
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
-
-<!--
+/**
 A Material Design [expansion panel with header and collapsible content](https://material.google.com/components/expansion-panels.html)
 
 ### Example
@@ -28,11 +20,27 @@ Custom property | Description | Default
 --paper-expansion-panel-content|Mixin applied to collapsible content|{}
 
 @demo demo/index.html
--->
-<dom-module id="paper-expansion-panel">
+*/
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+  */
 
-	<template>
+import '@polymer/iron-icons/iron-icons.js';
+import '@polymer/iron-collapse/iron-collapse.js';
+import '@polymer/paper-icon-button/paper-icon-button.js';
+import '@polymer/paper-item/paper-item.js';
+import '@polymer/paper-styles/paper-styles.js';
+import '@polymer/iron-flex-layout/iron-flex-layout.js';
+import '@polymer/polymer/polymer-legacy.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 
+class PaperExpansionPanel extends PolymerElement {
+    static get template() {
+        return html`
+    
 		<style>
 			.header {
 				min-height: 48px;
@@ -80,60 +88,33 @@ Custom property | Description | Default
 		<iron-collapse class="content" opened="{{opened}}">
 			<slot></slot>
 		</iron-collapse>
+`;
+    }
 
-	</template>
-</dom-module>
+    static get is() {
+        return 'paper-expansion-panel';
+    }
 
-<script>
 
-(function() {
 
-	Polymer({
-		is: 'paper-expansion-panel',
-		properties: {
-			/**
-			 * Text in the header row
-			 */
-			header: {
-				type: String,
-				value: '',
-			},
+    static get properties() {
+        return {
+            icon : {
+                type: String,
+                value: ''
+            },
 
-			/**
-			 * Summary of the expandible area
-			 */
-			summary: String,
+            title: {
+                type: String,
+                value: ''
+            },
 
-			/**
-			 * True if the content section is opened
-			 */
-			opened: {
-				type: Boolean,
-				reflectToAttribute: true,
-				notify: true
-			},
+            description: {
+                type: String,
+                value: ''
+            }
+        }
+    }
+}
 
-			_toggleIcon: {
-				type: String,
-				computed: '_computeToggleIcon(opened)'
-			}
-		},
-
-		// Private methods
-		/**
-		 * Fired whenever the status is changed (opened/closed)
-		 *
-		 * @event toggle
-		 */
-		_toggleOpened: function(e) {
-			this.opened = !this.opened;
-			this.fire('toggle', this);
-		},
-		_computeToggleIcon: function(opened) {
-			return opened ? 'icons:expand-less' : 'icons:expand-more';
-		}
-	});
-
-})();
-
-</script>
+customElements.define(PaperExpansionPanel.is, PaperExpansionPanel);
