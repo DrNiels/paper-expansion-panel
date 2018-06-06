@@ -99,21 +99,45 @@ class PaperExpansionPanel extends PolymerElement {
 
     static get properties() {
         return {
-            icon : {
+            /**
+             * Text in the header row
+             */
+            header: {
                 type: String,
-                value: ''
+                value: '',
             },
-
-            title: {
-                type: String,
-                value: ''
+            /**
+             * Summary of the expandible area
+             */
+            summary: String,
+            /**
+             * True if the content section is opened
+             */
+            opened: {
+                type: Boolean,
+                reflectToAttribute: true,
+                notify: true
             },
-
-            description: {
+            _toggleIcon: {
                 type: String,
-                value: ''
+                computed: '_computeToggleIcon(opened)'
             }
         }
+    }
+
+    // Private methods
+    /**
+     * Fired whenever the status is changed (opened/closed)
+     *
+     * @event toggle
+     */
+    _toggleOpened(e) {
+        this.opened = !this.opened;
+        this.fire('toggle', this);
+    }
+
+    _computeToggleIcon(opened) {
+        return opened ? 'icons:expand-less' : 'icons:expand-more';
     }
 }
 
