@@ -133,7 +133,7 @@ class PaperExpansionPanel extends PolymerElement {
      */
     _toggleOpened(e) {
         this.opened = !this.opened;
-        this.fire('toggle', this);
+        this.dispatchEvent(new Event('toggle'));
     }
 
     _computeToggleIcon(opened) {
