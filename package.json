@@ -12,7 +12,7 @@
   ],
   "homepage": "https://github.com/collaborne/paper-expansion-panel",
   "name": "dr-niels-paper-expansion-panel",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "resolutions": {
     "inherits": "2.0.3",
     "samsam": "1.1.3",
