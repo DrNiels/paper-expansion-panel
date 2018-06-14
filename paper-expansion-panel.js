@@ -49,6 +49,9 @@ class PaperExpansionPanel extends PolymerElement {
 				@apply --layout-justified;
 				@apply --paper-font-subhead;
 				@apply --paper-expansion-panel-header;
+				--paper-item-focused-before: {
+				  background: inherit;
+				}
 			}
 
 			.toggle {
