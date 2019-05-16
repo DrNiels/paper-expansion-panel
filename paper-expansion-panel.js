@@ -88,7 +88,7 @@ class PaperExpansionPanel extends PolymerElement {
 
 			<paper-icon-button class="toggle" icon="[[_toggleIcon]]"></paper-icon-button>
 		</paper-item>
-		<iron-collapse class="content" opened="{{opened}}">
+		<iron-collapse class="content" opened="{{opened}}" no-animation="[[noAnimation]]">
 			<slot></slot>
 		</iron-collapse>
 `;
@@ -120,6 +120,10 @@ class PaperExpansionPanel extends PolymerElement {
                 type: Boolean,
                 reflectToAttribute: true,
                 notify: true
+            },
+            noAnimation: {
+                type: Boolean,
+                value: false
             },
             _toggleIcon: {
                 type: String,
