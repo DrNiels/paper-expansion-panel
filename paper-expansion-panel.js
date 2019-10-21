@@ -42,6 +42,10 @@ class PaperExpansionPanel extends PolymerElement {
         return html`
     
 		<style>
+            :host {
+                display: block;
+            }
+
 			.header {
 				min-height: 48px;
 				color: var(--primary-text-color);
