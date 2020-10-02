@@ -1,3 +1,5 @@
+This is a Polymer 3 conversion of the paper-expansion-panel element from Collaborne (https://github.com/Collaborne/paper-expansion-panel) with some minor adjustments. The readme was not updated and is still the one from the original paper-expansion-panel element!
+
 paper-expansion-panel [![Travis state](https://travis-ci.org/Collaborne/paper-expansion-panel.svg?branch=master)](https://travis-ci.org/Collaborne/paper-expansion-panel) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/Collaborne/paper-expansion-panel)
 =========
 
